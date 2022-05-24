@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.skin.TabPaneSkin.TabContentRegion?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.question0_3.view.GameView"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox spacing="10">
+            <Rectangle fx:id="avatar"/>
+            <Label fx:id="userName"/>
+            <Label fx:id="time" alignment="TOP_RIGHT"/>
+            <Label fx:id="bossHealth"/>
+            <Label fx:id="score"/>
+            <Label fx:id="health"/>
+        </HBox>
+    </top>
+    <center>
+        <Pane fx:id="pane">
+            <Rectangle fx:id="airplane" layoutX="20" layoutY="20"/>
+            <Rectangle fx:id="boss"/>
+        </Pane>
+    </center>
+</BorderPane>

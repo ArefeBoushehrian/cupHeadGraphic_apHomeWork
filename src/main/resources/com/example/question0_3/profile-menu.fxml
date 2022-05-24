@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Rectangle?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.question0_3.view.ProfileMenu"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox spacing="10">
+            <Rectangle fx:id="avatar"/>
+            <Label fx:id="userName"/>
+            <Label fx:id="userScore"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="10" prefWidth="300">
+            <Label text="The profile main menu is here..." alignment="CENTER"/>
+            <HBox alignment="CENTER" spacing="10" prefWidth="300">
+                <Label text="change username: "/>
+                <TextField fx:id="newUsername" promptText="new username" onKeyTyped="#typing"/>
+                <Button text="change" onMouseClicked="#changeUsername"/>
+                <Label fx:id="messageOfUsername"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10" prefWidth="300">
+                <Label text="change password: "/>
+                <TextField fx:id="newPassword" promptText="new password" onKeyTyped="#typing"/>
+                <Button text="change" onMouseClicked="#changePassword"/>
+                <Label fx:id="messageOfPassword"/>
+            </HBox>
+            <Button text="logout" onMouseClicked="#logout" prefWidth="300"/>
+            <Button text="remove account" onMouseClicked="#removeAccount" prefWidth="300"/>
+            <Button text="change avatar" onMouseClicked="#changeAvatar" prefWidth="300"/>
+            <Button text="back" onMouseClicked="#back" prefWidth="300"/>
+        </VBox>
+    </center>
+</BorderPane>

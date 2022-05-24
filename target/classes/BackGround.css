@@ -1,0 +1,12 @@
+.win {
+    -fx-background-image: url(/winPage.jpeg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+.lose {
+    -fx-background-image: url(/losePage.jpg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}

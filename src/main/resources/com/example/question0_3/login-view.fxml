@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<BorderPane fx:controller="com.example.question0_3.view.LoginMenu"
+            prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <VBox alignment="CENTER" spacing="10" maxWidth="300">
+            <Text text="please enter username below:"/>
+            <TextField fx:id="username" promptText="enter username" onKeyTyped="#Typing"/>
+            <Text text="please enter password below:"/>
+            <TextField fx:id="password" promptText="enter password" onKeyTyped="#Typing"/>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="BASELINE_CENTER" spacing="10">
+            <Text text="Please enter one of keys below:"/>
+            <Button text="Guest" onMouseClicked="#enterGuest"/>
+            <Button fx:id="loginButton" text="Login" onMouseClicked="#Login"/>
+            <Button fx:id="signInButton" text="Sign in" onMouseClicked="#SignIn"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

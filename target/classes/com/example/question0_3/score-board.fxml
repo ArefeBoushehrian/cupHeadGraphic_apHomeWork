@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.question0_3.view.ScoreBoard"
+            prefHeight="400.0" prefWidth="600.0">
+    <center>
+        <VBox>
+            <Label text="score board: "/>
+            <TableView fx:id="scoreBoard" prefWidth="300">
+                <columns>
+                    <TableColumn fx:id="usernameColumn" text="username" prefWidth="75"/>
+                    <TableColumn fx:id="scoreColumn" text="score" prefWidth="75"/>
+                    <TableColumn fx:id="timeColumn" text="time" prefWidth="75"/>
+                    <TableColumn fx:id="levelColumn" text="level" prefWidth="75"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10">
+                <Button text="back" onMouseClicked="#back"/>
+                <Button text="easy level sort" onMouseClicked="#easySort"/>
+                <Button text="intermediate level sort" onMouseClicked="#intermediateSort"/>
+                <Button text="hard level sort" onMouseClicked="#hardSort"/>
+                <Button text="devil mode sort" onMouseClicked="#devilSort"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
