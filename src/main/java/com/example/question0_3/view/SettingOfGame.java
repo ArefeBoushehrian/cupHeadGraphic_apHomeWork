@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.net.MalformedURLException;
 
@@ -42,6 +43,12 @@ public class SettingOfGame extends Application {
             Media audio = new Media(getClass().getResource("/audio1.wav").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(audio);
             mediaPlayer.setAutoPlay(true);
+            mediaPlayer.setOnEndOfMedia(new Runnable() {
+                @Override
+                public void run() {
+                    mediaPlayer.seek(Duration.ZERO);
+                }
+            });
             game.setAudio(mediaPlayer);
         }
     }
